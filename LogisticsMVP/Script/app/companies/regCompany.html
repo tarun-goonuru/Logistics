@@ -1,0 +1,173 @@
+﻿<!-- Sof Title-->
+<div class="page-title">
+    <div class="title_left">
+        <h2><i class="fa fa-building-o"></i> Add Company</h2>
+    </div>
+</div>
+<!-- Sof Title-->
+<div class="clearfix"></div>
+<!-- Sof Add Company-->
+<form class="form-horizontal" >
+    <!-- SOF  Company Info-->
+    <h3>Company Info</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Company Name</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="companyName" placeholder="" required ng-model="company.compName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Contact Person Name</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="contactPersonName" placeholder="" ng-model="company.contactPersonName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Last Name</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="lastName" placeholder="" ng-model="company.lastName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Email Id</label>
+                <div class="col-md-8">
+                    <input type="email" class="form-control" name="email" placeholder="" ng-model="company.email" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Mobile</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="mobile" placeholder="" ng-model="company.mobile" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Emergency Contact</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="emergencyContact" placeholder="" ng-model="company.emergencyContact" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Date of Estd</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="dofESTD" placeholder="" ng-model="company.dateOfEstb" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EOF  Company Info-->
+    <!-- SOF About Company-->
+    <h3>About Company</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="col-md-2">Upload Logo</label>
+                <div class="col-md-4">
+                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                    <!--<input type="email" class="form-control" name="email" placeholder="" />-->
+                </div>
+                <div class="col-md-4">
+                    <input type="button" class="btn btn-success" name="upload" value="Upload" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2">About Your Company</label>
+                <div class="col-md-7">
+                    <textarea cols="5" rows="5" class="form-control" ng-model="company.companyDesc"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EOF About Company-->
+    <!-- SOF Contact Details-->
+    <h3>Contact Details</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <h5 class="col-md-4">Office Address</h5>
+                <div class="col-md-8 add-content-right">
+                    <input type="button" class="btn btn-success" ng-show="false" name="addBranch" value="Add Branch" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Location</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="location" placeholder="" ng-model="company.location" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Street</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="street" placeholder="" ng-model="company.addressLine1" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Street2</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="street2" placeholder=""  ng-model="company.addressLine2" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">City</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="city" placeholder="" ng-model="company.city" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">State</label>
+                <div class="col-md-8">
+                    <select class="selectpicker show-tick form-control" ng-model="company.state">
+                        <option ng-repeat="s in states">{{s.name}}</option>
+                    </select>
+                   
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Country</label>
+                <div class="col-md-8">
+                    <select class="selectpicker show-tick form-control" ng-model="company.country">
+                        <option value="">-Select-</option>
+                        <option value="1">India</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Zip</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="zip" placeholder="" ng-model="company.zip" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">FAX</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="fax" placeholder="" ng-model="company.fax" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Phone</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="phone" placeholder=""  />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- EOF Contact Details-->
+    <div class="col-md-12">
+        <div class="form-group add-content-center">
+            <input type="button" class="btn btn-success" name="add" value="Add" ng-click="addCompany()"  />
+        </div>
+    </div>
+
+</form>
+
+<!-- Eof Add Compamy -->
+
+

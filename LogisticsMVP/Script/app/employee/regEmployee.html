@@ -1,0 +1,229 @@
+﻿<!-- Sof Title-->
+<div class="page-title">
+    <div class="title_left">
+        <h2><i class="fa fa-building-o"></i> Add Employee</h2>
+    </div>
+</div>
+<!-- Sof Title-->
+<div class="clearfix"></div>
+<!-- Sof Add Employee-->
+
+<form class="form-horizontal">
+    <uib-tabset active="active">
+        <uib-tab index="0" heading="Basic Info">
+            <!-- SOF Employee Info-->
+            <h3>Employee Info</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">First Name</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="firstName" placeholder="" ng-model="employeeInfo.firstName"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Last Name</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="lastName" placeholder="" ng-model="employeeInfo.lastName"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Job Title</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="jobTitle" placeholder="" ng-model="employeeInfo.jobTitle"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Employee ID</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="employeeid" placeholder="" ng-model="employeeInfo.employeId"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Role</label>
+                        <div class="col-md-8">
+                            <select class="selectpicker show-tick form-control" ng-model="employeeInfo.role">
+                                <option value="">-Select-</option>
+                                <option value="driver">Driver</option>
+                                <option value="admin">Admin</option>
+                                <option value="dispatcher">Dispatcher</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Dept / Division</label>
+                        <div class="col-md-8">
+                            <select class="selectpicker show-tick form-control" ng-model="employeeInfo.deptartment">
+                                <option value="">-Select-</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Date of Joining</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="doj" placeholder="" ng-model="employeeInfo.dateOfJoining"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Date of Birth</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="dob" placeholder="" ng-model="employeeInfo.dateOfBirth"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Email Id</label>
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" name="emailid" placeholder="" ng-model="employeeInfo.emailId"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF Employee Info-->
+            <!-- SOF Authentication Details-->
+            <h3>Authentication Details</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">User Name</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="userName" placeholder="" ng-model="employeeInfo.userName"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Password</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="password" placeholder="" ng-model="employeeInfo.password"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF Authentication Details-->
+            <div class="col-md-12">
+                <div class="form-group add-content-center">
+                    <input type="button" class="btn btn-success" name="save" value="Save" ng-click="addEmployee()">
+                </div>
+            </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="1" heading="Additional Info" disable="showTab">
+            <!-- SOF Contact Details-->
+            <h3>Contact Details</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h5 class="col-md-4">Address</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="col-md-4">Mobile</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="mobile" placeholder="" ng-model="employeeAdditionalInfo.mobile"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Emergency Contact</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="emergencycontact" placeholder="" ng-model="employeeAdditionalInfo.emrgencyContact"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Street</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="street" placeholder="" ng-model="employeeAdditionalInfo.street1"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Street2</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="street2" placeholder="" ng-model="employeeAdditionalInfo.street2"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="col-md-4">City</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="city" placeholder="" ng-model="employeeAdditionalInfo.city"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Branch</label>
+                        <div class="col-md-8">
+                            <select class="selectpicker show-tick form-control" ng-model="employeeAdditionalInfo.branch">
+                                <option value="">-Select-</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">State</label>
+                        <div class="col-md-8">
+                            <select class="selectpicker show-tick form-control" ng-model="employeeAdditionalInfo.state">
+                                <option value="">-Select-</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Zip</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="zip" placeholder="" ng-model="employeeAdditionalInfo.zip"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label class="col-md-4">Upload Pic</label>
+                            <div class="col-md-4">
+                                <!--<input type="text" class="form-control" name="pic" placeholder="" ng-model="employeeAdditionalInfo.base64"/>-->
+                                <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                            </div>
+                            <!--<div class="col-md-4">
+                                <input type="button" class="btn btn-primary" name="browse" value="Browse" />
+                                <input type="button" class="btn btn-success" name="upload" value="Upload" />
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF Contact Details-->
+            <!-- SOF Licence Details-->
+            <h3>Licence Details</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Licence</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="licence" placeholder="" ng-model="employeeAdditionalInfo.license"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Licence Type</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="licencetype" placeholder="" ng-model="employeeAdditionalInfo.licenseType"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Expiry Date</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="expirydate" placeholder="" ng-model="employeeAdditionalInfo.expiryDate"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF Licence Details-->
+            <div class="col-md-12">
+                <div class="form-group add-content-center">
+                    <input type="button" class="btn btn-success" name="save" value="Save" ng-click="addEmployeeAdditionalData()">
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</form>
+
+<!-- Eof Add Employee

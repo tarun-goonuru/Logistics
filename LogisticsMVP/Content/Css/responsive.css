@@ -1,0 +1,96 @@
+@media (max-width: 1290px) {
+.loginpage-slide img{
+height:100%;
+}
+}
+
+@media (max-width: 1200px) {
+	.footer .copyright{
+		display:block;
+		
+	}
+	
+	.footer .footer-links{
+		display:block;
+		margin:0;
+		padding:0;
+		line-height:30px;
+		
+	}
+	
+	
+	.top-search {
+    margin: 5px 15px 0 12px;
+    width: 201px;}
+	
+	.top-date{
+		display:none;
+	}
+	
+	
+}
+
+@media (max-width: 990px) {
+	.loginpage-slide{
+		display:none;
+		
+	}
+	
+	
+	
+	.footer{
+		left:15px;
+		text-align:center;
+		width:100%;
+	}
+	
+	.top_nav .nav > li > a {
+    padding: 5px 8px 7px 6px;}
+	
+	
+}
+
+@media screen and (max-width: 767px) {
+	.right-panel{
+		padding:0 15px;
+	}
+	
+	
+	
+	.forget-submit-btn, .login-btn{
+		width:100%;
+		margin-left:0;
+	}
+
+	
+	.footer{
+		position:relative;
+		padding:15px;
+		left:0;
+		bottom:0;
+		display:block;
+		margin-top:30px;
+		
+		
+	}
+	
+	.navbar-nav{
+		margin:0;
+		padding:0;
+	}
+	
+	.toggle {
+		float:none;
+	}
+	
+	.roles-dropdown{
+		display:inline;
+		
+	}
+	
+	.top-search{
+		width:90%;
+		margin:15px;
+	}
+	
+}

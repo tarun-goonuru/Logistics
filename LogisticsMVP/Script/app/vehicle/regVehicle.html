@@ -1,0 +1,301 @@
+<!-- Sof Title-->
+<div class="page-title">
+    <div class="title_left">
+        <h2><i class="fa fa-building-o"></i> Add Vehicle</h2>
+    </div>
+</div>
+<!-- Sof Title-->
+<div class="clearfix"></div>
+<!-- Sof Add Vehicle-->
+
+<form class="form-horizontal" ng-submit="saveVehcileDetails()">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="radio radio-info radio-inline">
+                <input type="radio" id="inservice" value="yes" name="service" checked>
+                <label for="inservice"> In Service </label>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="radio radio-info radio-inline">
+                <input type="radio" id="notinservice" value="no" name="service">
+                <label for="notinservice"> Not in Service </label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="col-md-4">Vehicle ID</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehicleDetails.truckId" class="form-control" name="vehicleid" placeholder="" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="col-md-4">Date of Add</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehicleDetails.date" class="form-control" name="dateofadd" placeholder="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SOF Owner Details-->
+    <h3>Owner Details</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Regd Owner</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OwnerDetails.owner" class="form-control" name="regdOwner" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">S/o, D/o, W/f</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OwnerDetails.so" class="form-control" name="sdwname" placeholder="" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Address</label>
+                <div class="col-md-8">
+                    <textarea rows="5" ng-model="VehiclesData.OwnerDetails.address" cols="10" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EOF Owner Details-->
+    <!-- SOF Vehicle Details-->
+    <h3>Vehicle Details</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">RC Number</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.rcNumber" class="form-control" name="rcnumber" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Make</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.make" class="form-control" name="make" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Modal</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.model" class="form-control" name="modal" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Mfg. Mth Yr</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.mnufactureDate" class="form-control" name="mfgmthyr" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Fuel</label>
+                <div class="col-md-8">
+                    <select class="selectpicker show-tick form-control" ng-model="VehiclesData.VehicleDetails.fuel">
+                        <option value="">-Diesel-</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Type of Body</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.bodyType" class="form-control" name="tob" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Unloaden Weight</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.unloadedWeight" class="form-control" name="unloadenweight" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Place of Reg</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.placeOfReg" class="form-control" name="por" placeholder="" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Engine Number</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.engineNumber" class="form-control" name="enginenumber" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Chasis Number</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.chasisNum" class="form-control" name="chasisnumber" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Registration Date</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.registrationDate" class="form-control" name="registrationdate" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Regn Valid upto</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.regnValidUpto" class="form-control" name="regnvalidupto" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Cubio Capacity</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.cubicCapacity" class="form-control" name="cubiocapacity" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Color</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.color" class="form-control" name="color" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Hypothecated To</label>
+                <div class="col-md-8">
+                    <select class="selectpicker show-tick form-control" ng-model="VehiclesData.VehicleDetails.hypothecatedTo" >
+                        <option value="">-Select Bank-</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Vehicle type</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.VehicleDetails.vehicleType" class="form-control" name="vehicletype" placeholder="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EOF Vehicle Details-->
+    <!-- SOF Other Details-->
+    <h3>Other Details</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Policy No</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OtherDetails.policyNo" class="form-control" name="policyno" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Insurance Provider</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OtherDetails.insurenceProvider" class="form-control" name="insuranceprovider" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Start Date</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OtherDetails.startDate" class="form-control" name="startdate" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">End Date</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OtherDetails.endDate" class="form-control" name="enddate" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Permit</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OtherDetails.permit" class="form-control" name="permit" placeholder="" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Vehicle Permit</label>
+                <div class="col-md-8">
+                    <select class="selectpicker show-tick form-control" ng-model="VehiclesData.OtherDetails.vehiclePermit">
+                        <option value="">-Select Bank-</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Vehicle Fitness</label>
+                <div class="col-md-8">
+                    <select class="selectpicker show-tick form-control" ng-model="VehiclesData.OtherDetails.vehicleFitness">
+                        <option value="">-Select-</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Fitness Date</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OtherDetails.vehicleFitness" class="form-control" name="fitnessdate" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Renewal Date</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OtherDetails.renewalDate" class="form-control" name="renewaldate" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Odometer Reading</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.OtherDetails.odometer" class="form-control" name="odometerreading" placeholder="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EOF Other Details-->
+    <!-- SOF Device Details-->
+    <h3>Device Details</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">Device Name</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.DeviceDetails.deviceName" class="form-control" name="devicename" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Device ID</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.DeviceDetails.deviceId" class="form-control" name="deviceid" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Status</label>
+                <div class="col-md-8">
+                    <select class="selectpicker show-tick form-control" ng-model="VehiclesData.DeviceDetails.status">
+                        <option value="">-Active-</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4">IMEI No</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.DeviceDetails.imeiNo" class="form-control" name="imeinumber" placeholder="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Creation Date</label>
+                <div class="col-md-8">
+                    <input type="text" ng-model="VehiclesData.DeviceDetails.creationDate" class="form-control" name="creationdate" placeholder="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EOF Device Details-->
+    <div class="col-md-12">
+        <div class="form-group add-content-center">
+            <input type="button" ng-click="saveVehcileDetails()" class="btn btn-success" name="save" value="Save">
+        </div>
+    </div>
+</form>
+
+<!-- Eof Add Vehicle -->

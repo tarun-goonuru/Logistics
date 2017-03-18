@@ -1,0 +1,53 @@
+﻿<div class="col-md-3 left_col menu_fixed"  ng-controller="menuCtrl">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><image src="Content/Images/client-logo-inner.png" /></a>
+        </div>
+
+        <div class="clearfix"></div>
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <ul class="nav side-menu" >
+                    <li ng-repeat="m in menuItems">
+                        
+                        <a ui-sref={{m.state}}><i class={{m.cssClass}}></i> {{m.name}} </a>
+
+                    </li>
+                    <!--<li>
+                        <a href="home"><i class="fa fa-truck"></i> Vehicles </a>
+
+                    </li>
+                    <li>
+                        <a href="home"><i class="fa fa-users"></i> Employees </a>
+
+                    </li>
+                    <li>
+                        <a href="home"><i class="fa fa-cog"></i> Settings </a>
+
+                    </li>-->
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /sidebar menu -->
+
+</div>
+
+
+
+
+
+
+
+<!--<div >
+    <h2>Menu</h2>
+    <ul>
+        <li ><a ui-sref={{m.state}}>{{m.name}}</a></li>
+    </ul>
+</div>-->
+
+
